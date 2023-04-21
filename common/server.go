@@ -5,7 +5,7 @@ package common
 import "fmt"
 import "encoding/json"
 
-type ServerJson struct {
+type Server struct {
 	// Name corresponds to the JSON schema field "name".
 	Name string `json:"name" yaml:"name"`
 
@@ -20,28 +20,28 @@ type ServerJson struct {
 }
 
 // UnmarshalJSON implements json.Unmarshaler.
-func (j *ServerJson) UnmarshalJSON(b []byte) error {
+func (j *Server) UnmarshalJSON(b []byte) error {
 	var raw map[string]interface{}
 	if err := json.Unmarshal(b, &raw); err != nil {
 		return err
 	}
 	if v, ok := raw["name"]; !ok || v == nil {
-		return fmt.Errorf("field name in ServerJson: required")
+		return fmt.Errorf("field name in Server: required")
 	}
 	if v, ok := raw["port"]; !ok || v == nil {
-		return fmt.Errorf("field port in ServerJson: required")
+		return fmt.Errorf("field port in Server: required")
 	}
 	if v, ok := raw["status"]; !ok || v == nil {
-		return fmt.Errorf("field status in ServerJson: required")
+		return fmt.Errorf("field status in Server: required")
 	}
 	if v, ok := raw["url"]; !ok || v == nil {
-		return fmt.Errorf("field url in ServerJson: required")
+		return fmt.Errorf("field url in Server: required")
 	}
-	type Plain ServerJson
+	type Plain Server
 	var plain Plain
 	if err := json.Unmarshal(b, &plain); err != nil {
 		return err
 	}
-	*j = ServerJson(plain)
+	*j = Server(plain)
 	return nil
 }
