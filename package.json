@@ -1,0 +1,18 @@
+{
+  "name": "tunnelhop-types",
+  "version": "1.1.0",
+  "description": "Shared and common types for TunnelHop projects",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schachte/TunnelHop-Types.git"
+  },
+  "author": "TunnelHop",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Schachte/TunnelHop-Types/issues"
+  },
+  "homepage": "https://github.com/Schachte/TunnelHop-Types#readme"
+}
