@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Schachte/TunnelHop-Types.git",
+    "url": "git+https://github.com/tunnelhop/TunnelHop-Types.git",
     "pub": "npm version patch --force && npm publish"
   },
   "author": "TunnelHop",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Schachte/TunnelHop-Types/issues"
+    "url": "https://github.com/tunnelhop/TunnelHop-Types/issues"
   },
-  "homepage": "https://github.com/Schachte/TunnelHop-Types#readme",
+  "homepage": "https://github.com/tunnelhop/TunnelHop-Types#readme",
   "main": "index.js"
 }
