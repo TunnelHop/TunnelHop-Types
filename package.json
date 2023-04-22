@@ -1,5 +1,5 @@
 {
-  "name": "tunnelhop-types",
+  "name": "tunnelhop-common",
   "version": "1.0.0",
   "description": "Shared and common types for TunnelHop projects",
   "scripts": {
