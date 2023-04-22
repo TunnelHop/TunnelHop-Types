@@ -5,6 +5,8 @@ This repo contains shared types between TunnelHop projects compiled into multipl
 # How to use this repo in other repos
 In order to leverage this repo in other repos you must install the package via `NPM`.
 
+https://www.npmjs.com/package/tunnelhop-common
+
 Install with the following:
 ```bash
 npm i tunnelhop-common
