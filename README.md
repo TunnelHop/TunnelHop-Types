@@ -14,8 +14,16 @@ npm i tunnelhop-common
 
 from here, you should be able to leverage types from the `common` package.
 
+# Cutting a release
 
-# Development For This Repo
+1. Update the version in `package.json`
+2. Tag a new release `git tag -a v<SEMANTIC_VERSION> -m "<YOUR_MESSAGE>"`
+
+You can follow semantic version rules stated from [semver.](semver.org)
+
+
+
+# Development for this repo
 
 ## Auto Generate Code
 _See installation section below_
@@ -40,7 +48,7 @@ _json2ts_
 $ npm i -g json-schema-to-typescript
 ```
 
-## Generate Code
+## Generate code
 ### Typescript
 ```bash
 $ json2ts server.json Server.ts 
