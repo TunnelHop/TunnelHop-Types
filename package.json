@@ -1,6 +1,6 @@
 {
   "name": "tunnelhop-common",
-  "version": "1.0.5",
+  "version": "1.0.18",
   "description": "Shared and common types for TunnelHop projects",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tunnelhop/TunnelHop-Types.git",
-    "pub": "npm version patch"
+    "pub": "npm version patch --no-git-tag-version"
   },
   "author": "TunnelHop",
   "license": "MIT",
