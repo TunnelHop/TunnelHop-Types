@@ -16,12 +16,9 @@ from here, you should be able to leverage types from the `common` package.
 
 # Cutting a release
 
-1. Update the version in `package.json`
-2. Tag a new release `git tag -a v<SEMANTIC_VERSION> -m "<YOUR_MESSAGE>"`
+1. `make cut-release` will cut a `patch release`
 
 You can follow semantic version rules stated from [semver.](semver.org)
-
-
 
 # Development for this repo
 

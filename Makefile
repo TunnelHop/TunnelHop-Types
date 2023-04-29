@@ -15,4 +15,13 @@ generate: $(JSON_FILES)
 
 .PHONY: cut-release
 cut-release:
-	@echo "Cutting a release"
+	@echo "Preparing the release"
+	@echo "Bumping the version of the types library"
+	@npm pub
+	@VERSION=$$(cat package.json | jq -r '.version')
+	@echo "Version bumped to $$VERSION"
+	@git add .
+	@git commit -m "Adding tagged release for version: $$VERSION"
+	@git push origin master
+	@git push origin master --tags
+	@echo "Pushing tagged released to Github"
