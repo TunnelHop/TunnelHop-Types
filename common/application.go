@@ -6,17 +6,17 @@ import "fmt"
 import "encoding/json"
 
 type Application struct {
-	// Alias corresponds to the JSON schema field "alias".
-	Alias string `json:"alias" yaml:"alias"`
-
-	// DomainName corresponds to the JSON schema field "domain_name".
-	DomainName string `json:"domain_name" yaml:"domain_name"`
+	// ApplicationName corresponds to the JSON schema field "application_name".
+	ApplicationName *string `json:"application_name,omitempty" yaml:"application_name,omitempty"`
 
 	// Id corresponds to the JSON schema field "id".
 	Id *int `json:"id,omitempty" yaml:"id,omitempty"`
 
 	// InternalPort corresponds to the JSON schema field "internal_port".
 	InternalPort int `json:"internal_port" yaml:"internal_port"`
+
+	// IsActive corresponds to the JSON schema field "is_active".
+	IsActive *bool `json:"is_active,omitempty" yaml:"is_active,omitempty"`
 
 	// Protocol corresponds to the JSON schema field "protocol".
 	Protocol string `json:"protocol" yaml:"protocol"`
@@ -39,12 +39,6 @@ func (j *Application) UnmarshalJSON(b []byte) error {
 	var raw map[string]interface{}
 	if err := json.Unmarshal(b, &raw); err != nil {
 		return err
-	}
-	if v, ok := raw["alias"]; !ok || v == nil {
-		return fmt.Errorf("field alias in Application: required")
-	}
-	if v, ok := raw["domain_name"]; !ok || v == nil {
-		return fmt.Errorf("field domain_name in Application: required")
 	}
 	if v, ok := raw["internal_port"]; !ok || v == nil {
 		return fmt.Errorf("field internal_port in Application: required")

@@ -1,6 +1,6 @@
 {
   "name": "tunnelhop-common",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "Shared and common types for TunnelHop projects",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -22,10 +22,10 @@
     "tcp_port": {
       "type": "integer"
     },
-    "domain_name": {
-      "type": "string"
+    "is_active": {
+      "type": "boolean"
     },
-    "alias": {
+    "application_name": {
       "type": "string"
     }
   },

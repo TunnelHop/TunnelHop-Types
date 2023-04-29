@@ -13,7 +13,7 @@ export interface Application {
   require_auth?: boolean;
   require_encryption?: boolean;
   tcp_port?: number;
-  domain_name: string;
-  alias: string;
+  is_active?: boolean;
+  application_name?: string;
   [k: string]: unknown;
 }
