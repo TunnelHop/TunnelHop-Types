@@ -15,7 +15,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: compile TypeScript
         run: |
-          apt-get install jq
           npm install typescript
           npx tsc
       - run: npm publish
