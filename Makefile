@@ -12,3 +12,7 @@ generate: $(JSON_FILES)
         json2ts ./schemas/$$filename.json "./common/$$capitalized".ts; \
 		echo "\t- generated $$capitalized.ts from" $${file} ; \
 	done
+
+.PHONY: cut-release
+cut-release:
+	@echo "Cutting a release"
