@@ -5,10 +5,15 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface Server {
-  name: string;
-  port: number;
-  url: string;
-  status: boolean;
+export interface Applications {
+  id?: number;
+  user_email: string;
+  protocol: string;
+  internal_port: number;
+  require_auth?: boolean;
+  require_encryption?: boolean;
+  tcp_port?: number;
+  domain_name: string;
+  alias: string;
   [k: string]: unknown;
 }

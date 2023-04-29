@@ -56,6 +56,5 @@ $ json2ts server.json Server.ts
 
 ### Go
 ```bash
-$ json2ts server.json Server.ts 
+$ go-jsonschema -p common schemas/<SCHEMA_FILE>.json --resolve-extension json > common
 ```
-

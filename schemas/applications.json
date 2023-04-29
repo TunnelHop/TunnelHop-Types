@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "user_email": {
+      "type": "string"
+    },
+    "protocol": {
+      "type": "string"
+    },
+    "internal_port": {
+      "type": "integer"
+    },
+    "require_auth": {
+      "type": "boolean"
+    },
+    "require_encryption": {
+      "type": "boolean"
+    },
+    "tcp_port": {
+      "type": "integer"
+    },
+    "domain_name": {
+      "type": "string"
+    },
+    "alias": {
+      "type": "string"
+    }
+  },
+  "required": ["user_email", "protocol", "internal_port", "domain_name", "alias"]
+}
