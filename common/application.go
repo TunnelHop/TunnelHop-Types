@@ -5,7 +5,7 @@ package common
 import "fmt"
 import "encoding/json"
 
-type Applications struct {
+type Application struct {
 	// Alias corresponds to the JSON schema field "alias".
 	Alias string `json:"alias" yaml:"alias"`
 
@@ -35,31 +35,31 @@ type Applications struct {
 }
 
 // UnmarshalJSON implements json.Unmarshaler.
-func (j *Applications) UnmarshalJSON(b []byte) error {
+func (j *Application) UnmarshalJSON(b []byte) error {
 	var raw map[string]interface{}
 	if err := json.Unmarshal(b, &raw); err != nil {
 		return err
 	}
 	if v, ok := raw["alias"]; !ok || v == nil {
-		return fmt.Errorf("field alias in Applications: required")
+		return fmt.Errorf("field alias in Application: required")
 	}
 	if v, ok := raw["domain_name"]; !ok || v == nil {
-		return fmt.Errorf("field domain_name in Applications: required")
+		return fmt.Errorf("field domain_name in Application: required")
 	}
 	if v, ok := raw["internal_port"]; !ok || v == nil {
-		return fmt.Errorf("field internal_port in Applications: required")
+		return fmt.Errorf("field internal_port in Application: required")
 	}
 	if v, ok := raw["protocol"]; !ok || v == nil {
-		return fmt.Errorf("field protocol in Applications: required")
+		return fmt.Errorf("field protocol in Application: required")
 	}
 	if v, ok := raw["user_email"]; !ok || v == nil {
-		return fmt.Errorf("field user_email in Applications: required")
+		return fmt.Errorf("field user_email in Application: required")
 	}
-	type Plain Applications
+	type Plain Application
 	var plain Plain
 	if err := json.Unmarshal(b, &plain); err != nil {
 		return err
 	}
-	*j = Applications(plain)
+	*j = Application(plain)
 	return nil
 }
