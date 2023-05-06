@@ -29,5 +29,5 @@
       "type": "string"
     }
   },
-  "required": ["user_email", "protocol", "internal_port", "domain_name", "alias"]
+  "required": ["user_email", "protocol", "internal_port", "domain_name", "application_name"]
 }
