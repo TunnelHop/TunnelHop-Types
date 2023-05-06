@@ -7,7 +7,7 @@ import "encoding/json"
 
 type Application struct {
 	// ApplicationName corresponds to the JSON schema field "application_name".
-	ApplicationName *string `json:"application_name,omitempty" yaml:"application_name,omitempty"`
+	ApplicationName string `json:"application_name" yaml:"application_name"`
 
 	// Id corresponds to the JSON schema field "id".
 	Id *int `json:"id,omitempty" yaml:"id,omitempty"`
@@ -39,6 +39,9 @@ func (j *Application) UnmarshalJSON(b []byte) error {
 	var raw map[string]interface{}
 	if err := json.Unmarshal(b, &raw); err != nil {
 		return err
+	}
+	if v, ok := raw["application_name"]; !ok || v == nil {
+		return fmt.Errorf("field application_name in Application: required")
 	}
 	if v, ok := raw["internal_port"]; !ok || v == nil {
 		return fmt.Errorf("field internal_port in Application: required")

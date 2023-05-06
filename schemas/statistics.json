@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "active_connections": {
+      "type": "integer"
+    },
+    "registered_domains": {
+      "type": "integer"
+    },
+    "avg_bytes_ingress": {
+      "type": "number"
+    },
+    "avg_bytes_egress": {
+      "type": "number"
+    }
+  },
+  "required": ["active_connections", "registered_domains", "avg_bytes_ingress", "avg_bytes_egress"]
+}
