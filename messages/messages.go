@@ -6,6 +6,7 @@ const (
 	NewControlTunnel TunnelMessage = iota
 	NewProxyTunnel
 	ProxyTunnelEstablished
+	DomainNotAvailable
 	DomainActivated
 	ControlTunnelHealthCheck
 	ControlTunnelHealthCheckAck
